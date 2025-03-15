@@ -1,0 +1,26 @@
+{
+  "name": "qa-engineer-ii-assessment-kinetek",
+  "version": "1.0.0",
+  "description": "This repo will be the best for forever from how much you received from candidates",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayeemsqa/qa-engineer-ii-assessment-kinetek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayeemsqa/qa-engineer-ii-assessment-kinetek/issues"
+  },
+  "homepage": "https://github.com/nayeemsqa/qa-engineer-ii-assessment-kinetek#readme",
+  "dependencies": {
+    "@playwright/test": "^1.51.0"
+  }
+}
