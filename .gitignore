@@ -1,0 +1,12 @@
+# Node modules (should not be pushed)
+node_modules/
+
+# Test results (auto-generated)
+test-results/
+
+# Playwright last run file
+.last-run.json
+
+# OS or editor files (optional but good practice)
+.DS_Store
+.vscode/
