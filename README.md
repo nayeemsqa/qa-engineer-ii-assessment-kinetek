@@ -8,7 +8,6 @@ This repo will be the best for forever from how much you received from candidate
 
 - Project under construction. Stay tunes for more update here...
 
-
 ## Add .gitignore file to exclude unnecessary files/folders like node_modules and test results
 
 - Prevent committing large or auto-generated files such as node_modules, test-results, and temporary data.
