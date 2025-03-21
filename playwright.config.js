@@ -2,7 +2,7 @@ const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests', // Test directory
-  timeout: 60000, // Timeout for each test
+  timeout: 30000, // Timeout for each test
   // retries: 2, // Retries on failure
   use: {
     browserName: 'chromium', // Use Chromium-based browsers
