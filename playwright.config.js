@@ -8,9 +8,8 @@ module.exports = defineConfig({
     browserName: 'chromium', // Use Chromium-based browsers
     channel: 'chrome', // Ensures Playwright runs tests in Google Chrome
     headless: false, // Runs tests with a visible browser window
-    // viewport: { width: 1280, height: 720 }, // Browser window size
     ignoreHTTPSErrors: true, // Ignore HTTPS errors
     video: 'retain-on-failure', // Record video only on failure
   },
-  reporter: [['html', { outputFolder: 'reports', open: 'never' }]], // HTML report config
+  reporter: [['html', { outputFolder: 'reports/HTML', open: 'never' }]], // HTML report config
 });
