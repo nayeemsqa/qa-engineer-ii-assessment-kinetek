@@ -1,8 +1,11 @@
 // tests/verifyProductQuantity.test.js
 
 const { test, expect } = require('@playwright/test');
+const CartPage = require('../pages/CartPage');
 
 test('Verify product quantity in cart', async ({ page }) => {
+    const cartPage = new CartPage(page);
+
     // Step 1: Navigate to the website
     await page.goto('http://automationexercise.com', { waitUntil: 'domcontentloaded' });
 
@@ -16,16 +19,15 @@ test('Verify product quantity in cart', async ({ page }) => {
     await expect(page.locator('.product-information')).toBeVisible();
 
     // Step 5: Set product quantity to 4
-    const quantityInput = page.locator('input#quantity');
-    await quantityInput.fill('4');
+    await cartPage.setQuantity('4');
 
     // Step 6: Click 'Add to Cart' button
-    await page.locator('button:has-text("Add to cart")').click();
+    await cartPage.clickAddToCart();
 
     // Step 7: Click 'View Cart' in the modal popup
-    await page.locator('#cartModal a:has-text("View Cart")').click();
+    await cartPage.clickViewCart();
 
     // Step 8: Verify product quantity in the cart
-    const cartQuantity = await page.locator('tr#product-1 button.disabled').textContent();
+    const cartQuantity = await cartPage.getCartQuantity();
     expect(cartQuantity.trim()).toBe('4');
 });
