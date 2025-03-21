@@ -3,7 +3,7 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   testDir: './tests', // Test directory
   timeout: 60000, // Timeout for each test
-  retries: 1, // Retries on failure
+  // retries: 2, // Retries on failure
   use: {
     browserName: 'chromium', // Use Chromium-based browsers
     channel: 'chrome', // Ensures Playwright runs tests in Google Chrome

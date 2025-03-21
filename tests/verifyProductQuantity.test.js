@@ -29,13 +29,16 @@ test('Verify product quantity in cart', async ({ page }) => {
     await page.waitForTimeout(5000);
 
     console.log("🧾 Step 7: Clicking 'View Cart'...");
-    await page.locator('a[href="/view_cart"]').click();
+    await page.locator('#cartModal a:has-text("View Cart")').click();
     await page.waitForTimeout(5000);
 
     console.log("📦 Step 8: Checking product quantity in cart...");
-    const cartQuantity = await page.locator('.cart_quantity_input').inputValue();
-    expect(cartQuantity).toBe('4');
+    const cartQuantity = await page.locator('tr#product-1 button.disabled').textContent();
+    expect(cartQuantity.trim()).toBe('4');
     console.log("✅ Product quantity in cart is correct!");
+    
+    
+    
 
     await page.waitForTimeout(5000); // Final pause before closing
 });
