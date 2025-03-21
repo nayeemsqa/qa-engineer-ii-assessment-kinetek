@@ -24,3 +24,10 @@ Utilities Folder (`utils/`)** - Contains helper functions to support test execut
 Test Results Folder (`test-results/`)** - Saves test execution reports for debugging and performance tracking.  
 Git Ignore (`.gitignore`)** - Excludes unnecessary files like `node_modules` to keep the repository clean.  
 Environment File (`.env`)** - Stores sensitive information securely and keeps configurations flexible.  
+
+## Run all tests:
+```bash
+npx playwright test tests
+
+## View the HTML test report
+npx playwright show-report reports
