@@ -30,5 +30,8 @@ test('Verify All Products Search Functionality', async ({ page }) => {
     const productNames = await searchPage.getProductNames();
     productNames.forEach(product => {
         expect(product.toLowerCase()).toContain('jeans');
+
+    console.log("Showing that all products are related to 'Jeans'");
+
     });
 });

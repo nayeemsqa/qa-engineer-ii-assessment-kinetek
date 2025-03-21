@@ -30,4 +30,5 @@ test('Verify product quantity in cart', async ({ page }) => {
     // Step 8: Verify product quantity in the cart
     const cartQuantity = await cartPage.getCartQuantity();
     expect(cartQuantity.trim()).toBe('4');
+    console.log("Product quantity matched")
 });

@@ -4,6 +4,7 @@ module.exports = defineConfig({
   testDir: './tests', // This will make sure Playwright picks up all files inside the 'tests' folder
   timeout: 30000, // Timeout for each test
   retries: 2, // Retries on failure
+  workers: 1, // Limit to 1 worker, run tests sequentially
   use: {
     browserName: 'chromium', // Use Chromium-based browsers
     channel: 'chrome', // Ensures Playwright runs tests in Google Chrome
